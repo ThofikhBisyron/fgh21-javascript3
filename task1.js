@@ -1,4 +1,3 @@
-
 const cekHariKerja = (day) => {
     return new Promise ((resolve, reject) => {   
         setTimeout(() => {
@@ -22,17 +21,17 @@ const cekHariKerja = (day) => {
     console.log ('hari ' +result + ' adalah hari kerja' )
 })
 
-    .catch ((Error) => {
-        console.log(Error)
+    .catch ((error) => {
+        console.log(error.message)
     })
-//
+//try catch
 
 const checkDay = async (day) => {
-    try {
+        try {
         const result = await cekHariKerja(day);
         console.log('hari ' +result + ' adalah hari kerja' )
-    } catch (Error){
-        console.log(Error)
+    }   catch (error){
+        console.log(error.message)
     }
 }
 
